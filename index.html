@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href = "style.css">
+</head>
+<body>
+
+
+      <div class="des">
+        <div class="des1">
+          <div class="grass">Grass 🌿</div>
+          <div class="grassEater">Grass Eater 🐂</div>
+          <div class="dog">Dog 🐕</div>
+          <div class="predator">Predator 🐉</div>
+          <div class="bomb">Bomb 💣</div>
+          <div class="deminer">Deminer 👷‍♂️</div>
+        </div>
+
+        <div class="des2">
+          <div class="grass">Grass. multiplies over free matrixes, 
+            changes color depending on weather conditions</div>
+          <div class="grassEater">Grasseater. Can move on free matrixes,
+            has its own Energy that grows by eating Grass and
+            decreases during movement</div>
+          <div class="dog">Dog. Can move on free matrixes and grasses,
+            has its own Energy, which grows at the expense of destroying Predator and
+            decreases during movement. Protects Grasseater</div>
+          <div class="predator">Predator. Can move on free matrixes,
+            has its own Energy that grows by eating Grass and Grasseater and
+            decreases during movement</div>
+          <div class="bomb">Bomb. Placed in one of the random cells of the matrix,
+            and when the Grasseater stands on the Bombs the game refreshes,
+            and it all starts again</div>
+          <div class="deminer">Deminer. Can move on free matrix and grasses,
+            When an Bomb is detected, it destroys it, protecting the Grasseater</div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+      <div class="diagram1">
+        <canvas id="myChart" width="400" height="400"></canvas>
+      </div>
+
+
+
+
+
+
+
+      
+      <div class="adder">
+        <div onclick="AddGrass()" class="btn btn-2 btn-2h grassbtn">Grass</div>
+        <div onclick="AddGrassEater()" class="btn btn-2 btn-2h grassEaterbtn">Grasseater</div>
+        <div onclick="AddDog()" class="btn btn-2 btn-2h dogbtn">Dog</div>
+        <div onclick="AddPredator()" class="btn btn-2 btn-2h predatorbtn">Predator</div>
+        <div onclick="AddBomb()" class="btn btn-2 btn-2h bombbtn">Bomb</div>
+        <div onclick="AddDeminer()" class="btn btn-2 btn-2h deminerbtn">Deminer</div>
+        <div onclick="KillAll()" class="btn btn-2 btn-2h killbtn">KillAll</div>
+      </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+<main>
+  <div class="seasons">
+    <button onclick="Spring()" class="depthsp depth" type="button">Spring</button>
+    <button onclick="Summer()" class="depthsu depth" type="button">Summer</button>
+    <button onclick="Autumn()" class="depthau depth" type="button">Autumn</button>
+    <button onclick="Winter()" class="depthwi depth" type="button">Winter</button>
+  </div>
+</main>
+</body>
+</html>
